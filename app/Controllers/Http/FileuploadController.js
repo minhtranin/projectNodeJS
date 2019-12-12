@@ -1,5 +1,16 @@
 'use strict'
 const Helpers = use('Helpers')
+var EventEmitter = require('events')
+
+/**
+ * @version 2.0.0
+ * @author Minhran
+ */
+var ee = new EventEmitter()
+ee.on('message', function (text) {
+  console.log(text)
+})
+
 class FileuploadController {
  /**
       * @swagger
@@ -17,19 +28,18 @@ class FileuploadController {
        *       - in: formData
        *         name: image
        *         type: file
-     
-       *   - in: formData
-       *         name: image2
-       *         type: file
-  
-    
       *     responses:
       *       200:
       *         description: Server is OK!
       *       500:
       *         description: Error Server Internal!
       */    
+
+      /**this is a description of the foo function
+       * @returns {string}
+       */
     async Upload ({request,response}){
+      ee.emit('message', 'hello world')
         const profilePics = request.file('image', {
             types: ['image'],
             size: '2mb'

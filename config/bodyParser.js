@@ -107,7 +107,7 @@ module.exports = {
     | Also this value is considered when `autoProcess` is set to true.
     |
     */
-    maxSize: '20mb',
+    maxSize: '100mb',
 
     /*
     |--------------------------------------------------------------------------
@@ -121,7 +121,7 @@ module.exports = {
     | This value can contain a boolean or an array of route patterns
     | to be autoprocessed.
     */
-    autoProcess: true,
+    autoProcess: false,
 
     /*
     |--------------------------------------------------------------------------
@@ -133,7 +133,7 @@ module.exports = {
     | is to true. Otherwise everything is processed manually.
     |
     */
-    processManually: []
+    processManually: ['/upload']
 
     /*
     |--------------------------------------------------------------------------

@@ -60,6 +60,8 @@ class SwaggerController {
                   }
         }
         const  status =  await Helper.sendGrid(dataMail)
+        console.log('ok')
+        console.log(status)
         if (status === "success")
         return response.status(200).send('please check your email to active account')
         //return response.status(404).send("Can't created account") //+status)

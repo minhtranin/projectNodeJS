@@ -20,7 +20,8 @@ const providers = [
   '@adonisjs/session/providers/SessionProvider',
   '@adonisjs/auth/providers/AuthProvider',
   'adonis-swagger/providers/SwaggerProvider',
-  '@adonisjs/validator/providers/ValidatorProvider'
+  '@adonisjs/validator/providers/ValidatorProvider',
+  '@adonisjs/drive/providers/DriveProvider',
 ]
 
 /*
@@ -48,7 +49,9 @@ const aceProviders = [
 |   { Route: 'Adonis/Src/Route' }
 |
 */
-const aliases = {}
+const aliases = {
+  AmazonS3: 'App/Library/AmazonS3'
+}
 
 /*
 |--------------------------------------------------------------------------
